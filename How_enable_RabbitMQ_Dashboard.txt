@@ -1,0 +1,21 @@
+
+
+https://codewithmukesh.com/blog/rabbitmq-with-aspnet-core-microservice/
+
+
+Enabling RabbitMQ Management Plugin – Dashboard
+Now that we have our RabbitMQ Service installed at the sysyem level, we need to activate the Management Dashboard which by default is disabled. To do this, open up Command Prompt with Admin Rights and enter the following command
+
+cd C:\Program Files\RabbitMQServer\rabbitmq_server-3.10.6\sbin
+rabbitmq-plugins enable rabbitmq_management
+net stop RabbitMQ
+net start RabbitMQ
+
+Line #1 we make the instalation directory as our default working directory for cmd. Please note that your directory path may differ.
+Line #2 – Here we enable the Management Plugin
+Line #3-4 – We restart the RabbitMQ Service.
+
+configuring rabbitMQ management plugin RabbitMQ with ASP.NET Core - Microservice Communication with MassTransit
+That’s it. Now Navigate to http://localhost:15672/. Here is where you can find the management dashboard of RabbitMQ running.
+
+
